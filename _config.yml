@@ -1,4 +1,5 @@
 ---
+future: true
 title: 5pani2pesci
 timezone: UTC
 collections:
