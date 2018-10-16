@@ -1,0 +1,28 @@
+header {
+    padding: 2rem 0;
+}
+
+.list-dates {
+    margin: 0 auto;
+    padding: 0 0;
+    // background: red;
+}
+
+.el-dates {
+    padding: 0.4rem 0;
+    // border: 0.1px solid black;
+    // background: yellow;
+    margin: 0 auto;
+}
+.el-dates .days {
+    text-align: right;
+    font-weight: bold;
+}
+
+.el-dates.location {
+    text-align: left;    
+}
+
+.main-text {
+    padding: 2em 0;
+}

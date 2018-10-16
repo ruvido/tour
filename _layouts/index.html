@@ -2,14 +2,38 @@
 layout: default
 ---
 
+<!--
 <h1>L'AMORE CHIAMA!</h1> 
 <h3>Pagina in costruzione</h3>
 <h3>Troverai tutte le informazioni online ed i moduli di iscrizione a partire dal 16 Ottobre</h3>>
-<!-- 
-{{site.posts}}
+ -->
 
-{% for post in site.posts reversed %}
-    {{ post.title }}
-{% endfor %}
+ <div class="container">
 
-{{content}} -->
+    <header>
+        <h1>L'Amore Chiama!</h1>
+        <h2>TOUR 2018-2019</h2>
+    </header>
+
+    <div class="list-dates">
+        {% for post in site.posts reversed %}
+        {% if post.link %}
+        <a href="{{site.baseurl}}{{post.url}}">
+        {% endif %}
+        <div class="el-dates">
+            <span class="days">{{ post.days }}</span>
+            <span class="sep">&bull;</span>
+            <span class="location">{{ post.location }}</span>
+        </div>
+        {% if post.link %}
+        </a>
+        {% endif %}
+        {% endfor %}
+    </div>
+
+    <div class="main-text">
+        {{content}}
+    </div>
+
+</div>
+
