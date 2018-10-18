@@ -7,11 +7,39 @@ layout: default
     <header>
         <h1>{{page.location}}</h1>
         <h2>{{page.days}}</h2>
+        <!-- <img src="{{site.baseurl}}/images/{{page.image}}"> -->
+        <div class="light-link">
+            <a href="{{site.baseurl}}/">⟵ Indietro</a>
+        </div>
     </header>
 
     <div class="main-text">
+	    <p><strong>L’amore chiama!</strong> è una esperienza di due giorni per partire alla scoperta della tua vocazione, per incamminarti deciso verso la gioia piena, equipaggiandoti di tutto l’occorrente per questo avventuroso viaggio, il più importante della vita!</p>
+
+        <div class="centered-button">
+            <a href="{{page.form}}">
+            <img src="{{site.baseurl}}/images/iscriviti.jpg">
+            </a>
+        </div>
+
         {{content}}
-    </div>
+
+        <div class="centered-button">
+                <p></p>
+                <p class="big-text">Sei pronto per partire?</p>
+                <p></p>
+                <p></p>
+                <a href="{{page.form}}">
+                <img src="{{site.baseurl}}/images/iscriviti.jpg">
+                </a>
+            </div>
+        </div>
+
+    <footer>
+        <div class="centered-button light-link">
+            <a href="{{site.baseurl}}/">Tutte le date</a>
+        </div>
+    </footer>
 
 </div>
 

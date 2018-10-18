@@ -45,6 +45,15 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+strong {
+  font-weight: bold; }
+
+em {
+  font-style: italic; }
+
+p {
+  padding: 0.4em 0; }
+
 h1, h2, h3, h4 {
   font-weight: bold; }
 
@@ -54,13 +63,19 @@ h1 {
 
 h2 {
   font-size: 1.618em;
-  padding: 2em 0 1em 0; }
+  padding: 1.6em 0 0.6em 0; }
+
+h3 {
+  padding: 1em 0 0.6em 0; }
 
 header h1, header h2 {
   padding: 0.2rem; }
 
 a {
   color: black; }
+
+.big-text {
+  font-size: 1.618em; }
 
 .container {
   font-family: 'Roboto Mono', monospace;
@@ -70,7 +85,9 @@ a {
   margin: 0 auto; }
 
 header {
-  padding: 2rem 0; }
+  padding: 4rem 0 0 0; }
+  header img {
+    max-width: 100%; }
 
 .list-dates {
   margin: 0 auto;
@@ -89,3 +106,15 @@ header {
 
 .main-text {
   padding: 2em 0; }
+
+.centered-button {
+  padding: 2rem 0;
+  text-align: center; }
+  .centered-button img {
+    width: 140px;
+    height: auto; }
+
+.light-link {
+  padding: 0.4rem 0; }
+  .light-link a {
+    color: #bdc3c7; }

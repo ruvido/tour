@@ -8,7 +8,10 @@
 }
 
 header {
-    padding: 2rem 0;
+    padding: 4rem 0 0 0;
+    img {
+        max-width: 100%;
+    }
 }
 
 .list-dates {
@@ -34,4 +37,20 @@ header {
 
 .main-text {
     padding: 2em 0;
+}
+
+.centered-button {
+    padding: 2rem 0;
+    text-align: center;
+    img {
+        width: 140px;
+        height: auto;    
+    }
+}
+
+.light-link {
+    padding: 0.4rem 0;
+    a {
+        color:#bdc3c7;
+    }
 }
