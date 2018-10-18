@@ -17,7 +17,7 @@ layout: default
 
     <div class="list-dates">
         {% for post in site.posts reversed %}
-        {% if post.link %}
+        {% if post.form %}
         <a href="{{site.baseurl}}{{post.url}}">
         {% endif %}
         <div class="el-dates">
@@ -25,7 +25,7 @@ layout: default
             <span class="sep">&bull;</span>
             <span class="location">{{ post.location }}</span>
         </div>
-        {% if post.link %}
+        {% if post.form %}
         </a>
         {% endif %}
         {% endfor %}
