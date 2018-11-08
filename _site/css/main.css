@@ -121,3 +121,6 @@ header {
   padding: 0.4rem 0; }
   .light-link a {
     color: #bdc3c7; }
+
+.grayed-text {
+  color: #bdc3c7; }

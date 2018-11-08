@@ -25,17 +25,29 @@ layout: default
 
     <div class="list-dates">
         {% for post in site.posts reversed %}
-        {% if post.form %}
-        <a href="{{site.baseurl}}{{post.url}}">
-        {% endif %}
+	
+	{% assign compDate = 'now' | date: "%Y%m%d" | plus: 2 %}
+	{% assign date = post.date | date: "%Y%m%d" | plus: 0 %}
+
+	{% assign passed = false %}
+	{% if date < compDate %}
+		{% assign passed = true %}
+	{% endif %}
+
+	{% assign linkDate = false %}
+	{% if post.form and passed == false %}
+		{% assign linkDate = true %}
+	{% endif %}
+
+        {% if linkDate %}<a href="{{site.baseurl}}{{post.url}}">{% endif %}
+        {% if passed %}<div class='grayed-text'>{% endif %}
         <div class="el-dates">
             <span class="days">{{ post.days }}</span>
             <span class="sep">&bull;</span>
             <span class="location">{{ post.location }}</span>
         </div>
-        {% if post.form %}
-        </a>
-        {% endif %}
+        {% if passed %}</div>{% endif %}
+        {% if linkDate %}</a>{% endif %}
         {% endfor %}
     </div>
 
