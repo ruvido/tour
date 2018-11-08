@@ -33,6 +33,7 @@ layout: default
 	{% if date < compDate %}
 		{% assign passed = true %}
 	{% endif %}
+	{% assign passed = false %}
 
 	{% assign linkDate = false %}
 	{% if post.form and passed == false %}
