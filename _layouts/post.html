@@ -1,6 +1,13 @@
 ---
 layout: default
 ---
+{% assign compDate = 'now' | date: "%Y%m%d" | plus: 2 %}
+{% assign date = page.date | date: "%Y%m%d" | plus: 0 %}
+
+{% assign open = true %}
+{% if date < compDate %}
+	{% assign open = false %}
+{% endif %}
 
  <div class="container">
 
@@ -16,19 +23,31 @@ layout: default
     <div class="main-text">
 	    <p><strong>L’amore chiama!</strong> è una esperienza di due giorni per partire alla scoperta della tua vocazione, per incamminarti deciso verso la gioia piena, equipaggiandoti di tutto l’occorrente per questo avventuroso viaggio, il più importante della vita!</p>
 
+	{% if open %}
         <div class="centered-button">
             <a href="{{page.form}}">
             <img src="{{site.baseurl}}/images/iscriviti.jpg">
             </a>
         </div>
+	
+	{% else %}
+        <div class="centered-button light-link">
+        <p></p>
+        <p></p>
+            ISCRIZIONI CHIUSE<br>
+            <a href="{{site.baseurl}}/">Vedi tutte le date</a>
+        </div>
+	{% endif %}
 
         {{content}}
 
+        <p></p>
+        <p></p>
+        <p></p>
+	{% include youtube.html url="https://www.youtube.com/embed/SeBKQfUwoIw"%}
+
+	{% if open %}
         <div class="centered-button">
-                <p></p>
-		{% include youtube.html url="https://www.youtube.com/embed/SeBKQfUwoIw"%}
-                <p></p>
-                <p></p>
                 <p class="big-text">Sei pronto per partire?</p>
                 <p></p>
                 <p></p>
@@ -37,8 +56,11 @@ layout: default
                 </a>
             </div>
         </div>
+	{% endif %}
 
     <footer>
+        <p></p>
+        <p></p>
         <div class="centered-button light-link">
             <a href="{{site.baseurl}}/">Tutte le date</a>
         </div>
