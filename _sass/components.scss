@@ -13,8 +13,12 @@ img {
 
 header {
     padding: 4rem 0 0 0;
+    width: 100%;
     img {
-        max-width: 100%;
+	display: block;
+    	margin: 0 auto;
+        max-width: $tablet;
+    	width: 100%;
     }
 }
 
@@ -24,11 +28,18 @@ header {
     // background: red;
 }
 
+.highlight {
+	display: inline-block;
+	color: white;
+	background: black;
+	border-radius: 20px;
+}
+
 .el-dates {
-    padding: 0.4rem 0;
+    padding: 0 0.4rem;
     // border: 0.1px solid black;
     // background: yellow;
-    margin: 0 auto;
+    margin: 0.4rem auto;
 }
 .el-dates .days {
     text-align: right;

@@ -88,17 +88,27 @@ img {
   max-width: 100%; }
 
 header {
-  padding: 4rem 0 0 0; }
+  padding: 4rem 0 0 0;
+  width: 100%; }
   header img {
-    max-width: 100%; }
+    display: block;
+    margin: 0 auto;
+    max-width: 600px;
+    width: 100%; }
 
 .list-dates {
   margin: 0 auto;
   padding: 0 0; }
 
+.highlight {
+  display: inline-block;
+  color: white;
+  background: black;
+  border-radius: 20px; }
+
 .el-dates {
-  padding: 0.4rem 0;
-  margin: 0 auto; }
+  padding: 0 0.4rem;
+  margin: 0.4rem auto; }
 
 .el-dates .days {
   text-align: right;
