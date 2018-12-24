@@ -16,13 +16,6 @@ layout: default
 	<p></p>
 	<p></p>
     
-	<!--
-    <header>
-        <h1>L'Amore Chiama!</h1>
-        <h2>TOUR 2018-2019</h2>
-    </header>
-	-->
-
     <div class="list-dates">
         {% for post in site.posts reversed %}
 	
@@ -51,6 +44,12 @@ layout: default
         {% if linkDate %}</a>{% endif %}
         {% endfor %}
     </div>
+
+	<p></p>
+	<p>
+	Vuoi proporre una nuova data?
+	<div><a href="{{site.baseurl}}/scrivici">Scrivici un messaggio 👍</a></div>
+	</p>
 
     <div class="main-text">
         {{content}}
