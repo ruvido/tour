@@ -34,7 +34,23 @@ header {
 	background: black;
 	border-radius: 20px;
 }
-
+.tag {
+	padding: 0 0.4rem;
+	font-size: 0.8rem;
+}
+.silver {
+	background-color: #bdc3c7;
+	color: black;
+}
+.alizarin {
+	background-color: #e74c3c; 
+}
+.orange {
+	background-color: #f39c12; 
+}
+.turquoise {
+	background-color: #1abc9c; 
+}
 .el-dates {
     padding: 0 0.4rem;
     // border: 0.1px solid black;
@@ -76,3 +92,4 @@ header {
 .underlined {
 	text-decoration: underline;
 }
+
