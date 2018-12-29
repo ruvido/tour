@@ -5,8 +5,10 @@ layout: default
 {% assign date = page.date | date: "%Y%m%d" | plus: 0 %}
 
 {% assign open = true %}
+{% assign closed = false %}
 {% if date < compDate %}
 	{% assign open = false %}
+	{% assign closed = true %}
 {% endif %}
 
  <div class="container">
@@ -21,16 +23,25 @@ layout: default
     </header>
 
     <div class="main-text">
-	    <p><strong>L’amore chiama!</strong> è una esperienza di due giorni per partire alla scoperta della tua vocazione, per incamminarti deciso verso la gioia piena, equipaggiandoti di tutto l’occorrente per questo avventuroso viaggio, il più importante della vita!</p>
 
-	{% if open %}
+	    {% assign ontheroad = true %}
+	    {% if page.tags contains 'ritirone' %}
+	    	{% assign ontheroad = false %}
+	    {% endif %}
+
+	    {% if ontheroad %}
+	    <p><strong>L’amore chiama!</strong> è una esperienza di due giorni per partire alla scoperta della tua vocazione, per incamminarti deciso verso la gioia piena, equipaggiandoti di tutto l’occorrente per questo avventuroso viaggio, il più importante della vita!</p>
+	    {% endif %}
+
+	{% if open and page.form %}
         <div class="centered-button">
             <a href="{{page.form}}">
             <img src="{{site.baseurl}}/images/iscriviti.jpg">
             </a>
         </div>
+	{% endif %}
 	
-	{% else %}
+	{% if closed %}
         <div class="centered-button light-link">
         <p></p>
         <p></p>

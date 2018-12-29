@@ -7,22 +7,17 @@ layout: default
 <h3>Pagina in costruzione</h3>
 <h3>Troverai tutte le informazioni online ed i moduli di iscrizione a partire dal 16 Ottobre</h3>>
  -->
+ <header>
+	<img src="{{site.baseurl}}/images/amore-chiama-tour-min.jpg" alt="L'Amore Chiama! TOUR ::: 5pani2pesci">
+ </header>
 
  <div class="container">
 
-	<img src="{{site.baseurl}}/images/amore-chiama-tour-min.jpg" alt="L'Amore Chiama! TOUR ::: 5pani2pesci">
 	<p></p>
 	<p>Ecco i prossimi eventi. <i>Clicca sulla data per iscriverti!</i></p>
 	<p></p>
 	<p></p>
     
-	<!--
-    <header>
-        <h1>L'Amore Chiama!</h1>
-        <h2>TOUR 2018-2019</h2>
-    </header>
-	-->
-
     <div class="list-dates">
         {% for post in site.posts reversed %}
 	
@@ -40,8 +35,21 @@ layout: default
 		{% assign linkDate = true %}
 	{% endif %}
 
-        {% if linkDate %}<a href="{{site.baseurl}}{{post.url}}">{% endif %}
+	{% assign showLink = false %}
+        {% if linkDate or post.info %}
+	 	{% assign showLink = true %}
+	{% endif %}
+        {% if showLink %}<a href="{{site.baseurl}}{{post.url}}">{% endif %}
         {% if passed %}<div class='underlined grayed-text'>{% endif %}
+
+
+	{% if post.tags contains 'ritirone' %}
+        <div class="highlight el-dates">
+            <span class="days">{{ post.days }}</span>
+            <span class="sep">&bull;</span>
+            <span class="location">{{ post.location }}</span>
+        </div>
+	{% else %}
         <div class="el-dates">
             <span class="days">{{ post.days }}</span>
             <span class="sep">&bull;</span>
@@ -50,10 +58,20 @@ layout: default
             <span class="location">sposi</span>
 	    {% endif %}
         </div>
+	{% endif %}
+
         {% if passed %}</div>{% endif %}
-        {% if linkDate %}</a>{% endif %}
+        {% if showLink %}</a>{% endif %}
         {% endfor %}
     </div>
+
+	<p></p>
+	<p></p>
+	<p></p>
+	<p>
+	Vuoi proporre una nuova data?
+	<div><a href="{{site.baseurl}}/scrivici">Scrivici un messaggio 👍</a></div>
+	</p>
 
     <div class="main-text">
         {{content}}
