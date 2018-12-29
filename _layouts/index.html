@@ -46,6 +46,9 @@ layout: default
             <span class="days">{{ post.days }}</span>
             <span class="sep">&bull;</span>
             <span class="location">{{ post.location }}</span>
+	    {%if post.tags contains "famiglie" %}
+            <span class="location">sposi</span>
+	    {% endif %}
         </div>
         {% if passed %}</div>{% endif %}
         {% if linkDate %}</a>{% endif %}
