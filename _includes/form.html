@@ -16,7 +16,8 @@ target="hidden_iframe" onsubmit="submitted=formSetup(); return submitted">
 				<h2>Iscrizioni</h2>
 				<p>&nbsp;</p>
 
-				<input type="hidden" name="entry.1675453440" value="{{page.date}} {{include.location}}" />
+				<input type="hidden" name="entry.1675453440" value="{{include.location}}" />
+				<input type="hidden" name="entry.1242806365" value='{{ page.date | date: "%Y-%m-%d" }}' />
 
 				<label>Nome e Cognome</label>
 				<input id="name" type="text" name="entry.170408803" />
@@ -102,6 +103,10 @@ target="hidden_iframe" onsubmit="submitted=formSetup(); return submitted">
 												al.style.visibility = 'visible';
 												al.innerHTML = textAlert
 												sendForm = false
+								} else {
+												var btn = document.getElementById("submit_button")
+												btn.disabled=true; 
+												btn.value='Ci siamo quasi...'
 								}
 
 								return sendForm
