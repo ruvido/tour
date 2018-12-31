@@ -1,0 +1,53 @@
+form {
+//				text-align: center;
+  border: 1px solid #757575;
+	border-radius: 15px;
+	padding: 0rem 0;
+	padding-bottom: 2rem;
+}
+input {
+  font-family: 'Roboto Mono', monospace;
+  font-size:18px;
+  padding:10px 10px 4px 5px;
+  display:block;
+  width:240px;
+  border:none;
+  border-bottom:1px solid #757575;
+	margin: 0 auto;
+	margin-bottom: 1rem;
+	text-align:center;
+}
+input:focus { 
+  outline:none; 
+  border-bottom:4px solid #3498db;
+}
+label {
+				display: block;
+}
+.radio-item{
+	//background: red;
+	margin: 1rem auto;
+	span {
+		text-align: left;
+		display: inline-block;
+		//background: yellow;
+		width: 100px;
+	}
+	span.wide {
+		width: 140px;
+	}
+}
+input[type="radio"]{
+	display: inline-block;
+  padding: 0;
+	margin: 0;
+  width: 20px;
+	margin-left: 40px;
+}
+input[type="submit"]{
+  border:none;
+  padding:10px;
+	font-size: 18px;
+}
+
+
