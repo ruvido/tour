@@ -1,0 +1,15 @@
+---
+label: Tappa del TOUR
+hide_body: 
+is_partial: 
+fields:
+- name: days
+  label: Days
+  type: text
+  hidden: false
+  default: ''
+- name: location
+  label: Location
+  type: text
+  hidden: false
+  default: ''
