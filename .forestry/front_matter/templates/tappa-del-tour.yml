@@ -26,5 +26,3 @@ fields:
 - type: tag_list
   name: tags
   label: Tags (tour, ritirone, testimonianza, sposi)
-pages:
-- _posts/roma.md
