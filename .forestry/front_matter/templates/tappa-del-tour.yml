@@ -1,15 +1,22 @@
 ---
 label: Tappa del TOUR
-hide_body: 
-is_partial: 
+hide_body: false
+is_partial: false
 fields:
 - name: days
   label: Days
   type: text
   hidden: false
   default: ''
+  config:
+    required: true
 - name: location
   label: Location
   type: text
   hidden: false
   default: ''
+  config:
+    required: true
+- type: tag_list
+  name: tags
+  label: Tags (tour, ritirone, testimonianza, sposi)
