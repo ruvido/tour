@@ -3,6 +3,12 @@ label: Tappa del TOUR
 hide_body: false
 is_partial: false
 fields:
+- type: datetime
+  name: date
+  label: Date
+  config:
+    required: true
+    date_format: YYYY-MM-DD
 - name: days
   label: Days
   type: text
@@ -20,9 +26,3 @@ fields:
 - type: tag_list
   name: tags
   label: Tags (tour, ritirone, testimonianza, sposi)
-- type: datetime
-  name: date
-  label: Date
-  config:
-    required: true
-    date_format: YYYY-MM-DD
