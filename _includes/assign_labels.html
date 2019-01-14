@@ -1,0 +1,11 @@
+{% assign tag = include.tag %}
+{% assign db = site.data.tags %}
+
+{% ! if db contains tag %}
+	{% assign tag = 'default' %}
+{% endif %}
+
+{% assign label = db[tag].label %}
+{% assign class = db[tag].class %}
+{% assign highlight = db[tag].highlight %}
+{% assign text = db[tag].text %}

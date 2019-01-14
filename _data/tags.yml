@@ -1,0 +1,29 @@
+default:
+        label:
+        class: silver
+        highlight: false
+        text: 
+tour:
+        label:
+        class:
+        text: markdown text here
+
+ritirone:
+        label:
+        class:
+        highlight: true
+        text: markdown text here
+
+testimonianza:
+        label: testimonianza
+        class: yellow
+        text:
+incontro: 
+        label: incontro
+        class: orange
+        text:
+sposi: 
+        label: sposi
+        class: red
+        text: markdown text here
+
