@@ -1,7 +1,12 @@
 ---
 future: true
-title: 5pani2pesci
+title: "L'Amore Chiama! TOUR | 5pani2pesci"
+description: "L'Amore Chiama! Incontri sull'affettività e il discernimento vocazionale."
+url_5pani2pesci: https://5p2p.it
+url: https://tour.5p2p.it
+baseurl: ''
 timezone: UTC
+permalink: "/:title:year/"
 collections:
   pages:
     title: Pages
@@ -10,45 +15,11 @@ collections:
   posts:
     title: Posts
     output: true
-  uploads:
-    title: Uploads
-    output: true
 defaults:
 - scope:
     path: ''
   values:
     layout: post
-- scope:
-    path: ''
-    type: posts
-  values:
-    summary: ''
-    author: ''
-    id: ''
-    suggested: []
-subtitle: Avventure di Provvidenza Quotidiana
-description: Avventure di Provvidenza Quotidiana
-url: http://5p2p.it
-baseurl: '/tour'
-# archive: archivio
-# about: chi-siamo
-# markdown: kramdown
-# landing: index
-# post-per-page: 10
-# favicon: images/logo/logo-64.png
-# header:
-#   logo-img: images/logo/logo-64.png
-#   title-img: images/header/5pani2pesci-2017-blue-text-256.png
-#   subtitle: When you want more
-# facebook:
-#   app_id: 480155522043231
-#   page: https://www.facebook.com/5pani2pesci
-#   image:
-# footer:
-#   script-note: Crafted with <i class='fa fa-heart'></i> by <a href='http://5p2p.it'>5pani2pesci</a><br>Don't
-#     reproduce without permission.
-# google_analytics: UA-39520577-1
-permalink: "/:title:year/"
 exclude: [.git]
 # plugins:
 #   - jekyll-redirect-from

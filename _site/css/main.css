@@ -121,14 +121,19 @@ header, footer {
   background-color: #e74c3c; }
 
 .orange {
+  color: white;
   background-color: #f39c12; }
 
 .turquoise {
   background-color: #1abc9c; }
 
+.sun-flower {
+  color: black;
+  background-color: #f1c40f; }
+
 .el-dates {
   padding: 0 0.4rem;
-  margin: 0.4rem auto; }
+  margin: 0.8rem auto; }
 
 .el-dates .days {
   text-align: right;

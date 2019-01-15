@@ -31,10 +31,20 @@ layout: default
 
     <div class="main-text">
 
+      {% include bubble_tags.html tags=page.tags %}
+
 	    {% assign ontheroad = true %}
 	    {% if page.tags contains 'ritirone' %}
 	    	{% assign ontheroad = false %}
 				<p>Questo è il <strong>ritirone</strong> dell'Amore Chiama! 💪
+	    {% endif %}
+
+	    {% if page.tags contains 'sposi' %}
+	    	{% assign ontheroad = false %}
+	    {% endif %}
+
+	    {% if page.tags contains 'testimonianza' %}
+	    	{% assign ontheroad = false %}
 	    {% endif %}
 
 	    {% if ontheroad %}
