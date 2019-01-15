@@ -10,6 +10,10 @@ layout: default
 	{% assign open = false %}
 	{% assign closed = true %}
 {% endif %}
+{% if page.private == true %}
+	{% assign open = false %}
+	{% assign closed = true %}
+{% endif %}
 
  <div class="container">
 
@@ -30,8 +34,15 @@ layout: default
 
     <div class="main-text">
 
-      {% assign tag_label = page.tags[0] %}
-      {% include assign_labels.html tag=tag_label %}
+			{% assign tag_label = page.tags[0] %}
+			{% include assign_labels.html tag=tag_label %}
+			{% if label %}
+					<span class="highlight tag {{class}}">{{label}}</span>
+			{% endif %}
+		<p>{{text | markdownify}}</p>
+	{% unless tag == 'tour' %}
+		<p>{{content}}</p>
+    {% endunless %}
 
 	{% if open %}
         <div class="centered-button">
@@ -53,11 +64,9 @@ layout: default
   <p></p>
 	{% include youtube.html url="https://www.youtube.com/embed/SeBKQfUwoIw"%}
 
-	{% if content == '' %}
-				<p>Tutte le informazioni relative a questa data saranno online prossimamente 👍</p>
-  {% else %}
+	{% if tag == 'tour' %}
         {{content}}
-  {% endif %}
+    {% endif %}
 
 	{% if open %}
 								<div id="iscrizioni"></div>
