@@ -1,11 +1,11 @@
 ---
 layout: default
 ---
+{% assign open = true %}
+{% assign closed = false %}
 {% assign compDate = 'now' | date: "%Y%m%d" | plus: 2 %}
 {% assign date = page.date | date: "%Y%m%d" | plus: 0 %}
 
-{% assign open = true %}
-{% assign closed = false %}
 {% if date < compDate %}
 	{% assign open = false %}
 	{% assign closed = true %}
@@ -23,7 +23,6 @@ layout: default
     <header>
         <h1>{{page.location}}</h1>
         <h2>{{page.days}}</h2>
-        <!-- <img src="{{site.baseurl}}/images/{{page.image}}"> -->
         <div class="light-link">
             <a href="{{site.baseurl}}/">⟵ Indietro</a>
         </div>
@@ -31,25 +30,8 @@ layout: default
 
     <div class="main-text">
 
-      {% include bubble_tags.html tags=page.tags %}
-
-	    {% assign ontheroad = true %}
-	    {% if page.tags contains 'ritirone' %}
-	    	{% assign ontheroad = false %}
-				<p>Questo è il <strong>ritirone</strong> dell'Amore Chiama! 💪
-	    {% endif %}
-
-	    {% if page.tags contains 'sposi' %}
-	    	{% assign ontheroad = false %}
-	    {% endif %}
-
-	    {% if page.tags contains 'testimonianza' %}
-	    	{% assign ontheroad = false %}
-	    {% endif %}
-
-	    {% if ontheroad %}
-	    <p><strong>L’amore chiama!</strong> è una esperienza di due giorni per partire alla scoperta della tua vocazione, per incamminarti deciso verso la gioia piena, equipaggiandoti di tutto l’occorrente per questo avventuroso viaggio, il più importante della vita!</p>
-	    {% endif %}
+      {% assign tag_label = page.tags[0] %}
+      {% include assign_labels.html tag=tag_label %}
 
 	{% if open %}
         <div class="centered-button">

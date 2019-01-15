@@ -6,24 +6,24 @@ default:
 tour:
         label:
         class:
-        text: markdown text here
+        text: "**L’amore chiama!** è una esperienza di due giorni per partire alla scoperta della tua vocazione, per incamminarti deciso verso la gioia piena, equipaggiandoti di tutto l’occorrente per questo avventuroso viaggio, il più importante della vita!"
 
 ritirone:
-        label:
-        class:
+        label: ''
+        class: ''
         highlight: true
-        text: markdown text here
+        text: "Questo è il **ritirone** dell'Amore Chiama! 💪"
 
 testimonianza:
         label: testimonianza
-        class: yellow
-        text:
+        class: sun-flower
+        text: ''
 incontro: 
         label: incontro
         class: orange
-        text:
+        text: ''
 sposi: 
         label: sposi
-        class: red
+        class: alizarin
         text: markdown text here
 

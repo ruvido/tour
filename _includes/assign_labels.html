@@ -1,11 +1,21 @@
-{% assign tag = include.tag %}
 {% assign db = site.data.tags %}
 
-{% ! if db contains tag %}
-	{% assign tag = 'default' %}
+{% if db contains include.tag %}
+		{% assign tag = include.tag %}
+		{% assign label = db[tag].label %}
+{% else %}
+		{% assign tag = 'default' %}
+		{% assign label = include.tag %}
 {% endif %}
 
-{% assign label = db[tag].label %}
 {% assign class = db[tag].class %}
 {% assign highlight = db[tag].highlight %}
 {% assign text = db[tag].text %}
+
+{% include bubble_labels.html text=text class=class %}
+
+<span class="highlight tag {{class}}">{{label}}</span>
+
+{{text | markdownify}}
+
+
