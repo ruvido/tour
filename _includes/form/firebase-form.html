@@ -1,0 +1,189 @@
+<script src="https://www.gstatic.com/firebasejs/5.7.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.7.2/firebase-firestore.js"></script>
+<script>
+</script>
+
+<div id="alert" class="hidden bottom alert"></div>
+
+<div class="centered-text">
+<p>&nbsp;</p>
+<div class="huge-text">⚡</div>
+<p>&nbsp;</p>
+
+<form id="registrationForm" action="javascript:void(0);" onsubmit="formSetup()">
+		<h2>Iscrizioni</h2>
+			<p>&nbsp;</p>
+
+			<input type="hidden" id='eventLocation' value="{{include.location}}" />
+			<input type="hidden" id='eventDate' value='{{ include.date | date: "%Y-%m-%d" }}' />
+			<input type="hidden" id='submissionDate' value='{{ "today" | date: "%Y-%m-%d" }}' />
+
+			<label>Nome e Cognome</label>
+			<input id="name" type="text" />
+
+			<label>Email</label>
+			<input id="email" type="text" />
+
+			<label>Telefono</label>
+			<input id="phone" type="text" />
+
+			<p>&nbsp;</p>
+			<label>Quanti anni hai?</label>
+			<input id="age" type="hidden" />
+
+			<div class="radio-item">
+				<input name="radioAge" type="radio" value="18-24" />
+				<span>18-24</span>
+			</div>
+			<div class="radio-item">
+				<input name="radioAge" type="radio" value="25-34"/>
+				<span>25-34</span>
+			</div>
+			<div class="radio-item">
+				<input name="radioAge" type="radio" value="35-44+" />
+				<span>35-44+</span>
+			</div>
+
+			<p>&nbsp;</p>
+			<label>Da dove vieni?</label>
+			<input id="coming_from" type="hidden" />
+			<div class="radio-item">
+			  <input name="radioFrom" type="radio" value="Nord Italia" />
+				<span class="wide">Nord Italia</span>
+			</div>
+			<div class="radio-item">
+			  <input name="radioFrom" type="radio" value="Centro Italia"/>
+				<span class="wide">Centro Italia</span>
+			</div>
+			<div class="radio-item">
+			  <input name="radioFrom" type="radio" value="Sud Italia" />
+				<span class="wide">Sud Italia</span>
+			</div>
+			<div class="radio-item">
+			  <input name="radioFrom" type="radio" value="Isole" />
+				<span class="wide">Isole</span>
+			</div>
+			<div class="radio-item">
+			  <input name="radioFrom" type="radio" value="Estero" />
+				<span class="wide">Estero</span>
+			</div>
+
+			<p>&nbsp;</p>
+			<!-- Google Form -->
+			<input id="submit_button" type="submit" value="Iscriviti 👍">
+			<!--button id="submit_button">Iscriviti 👍</button-->
+
+</form>
+</div>
+
+<script>
+// Initialize Firebase
+var config = {
+  apiKey: "AIzaSyCTNgfT8iBS8xC4l_sM0WrvTWgnusG85OY",
+  databaseURL: "https://iscrizioni-tour.firebaseio.com",
+  projectId: "iscrizioni-tour",
+};
+firebase.initializeApp(config);
+
+// Initialize Cloud Firestore through Firebase
+var db = firebase.firestore();
+
+// Disable deprecated features
+db.settings({
+  timestampsInSnapshots: true
+});
+
+function firestoreAdd(data){
+
+		const usersRef = data.db.collection(data.collection).doc(data.doc)
+		
+		usersRef.get()
+		  .then(function (docSnapshot) {
+		    if (docSnapshot.exists) {
+		      usersRef.onSnapshot(function(doc) {
+					  var uniqueEmailText = 'Questa email è già stata utilizzata, usa un indirizzo differente' 
+					  showTextAlert(uniqueEmailText)
+					  var btn = document.getElementById("submit_button")
+				      btn.disabled=false; 
+				      btn.value='Iscriviti 👍'
+		      });
+		    } else {
+				usersRef.set(data.user)
+				.then(function() {
+						console.log("Document successfully written!");
+						window.location='{{site.baseurl}}/{{include.redirect}}'
+				})
+				.catch(function(error) {
+						console.error("Error writing document: ", error);
+						window.location='{{site.baseurl}}/{{include.error}}'
+				})
+		    }
+		  });
+
+}
+function showTextAlert(text) {
+		var preTextAlert = '⚠️'
+		var textAlert = preTextAlert+text
+		var al = document.getElementById("alert")
+		al.style.visibility = 'visible';
+		al.innerHTML = textAlert
+}
+
+
+function formSetup(submitted) {
+		var sendForm = true
+
+		var el = document.getElementById("registrationForm")
+		var name = document.getElementById("name").value
+		var email = document.getElementById("email").value
+		var phone = document.getElementById("phone").value
+		var age = el.radioAge.value
+		var from = el.radioFrom.value
+		document.getElementById("age").value = age;
+		document.getElementById("coming_from").value = from;
+		var eventLocation = document.getElementById("eventLocation").value
+		var eventDate = document.getElementById("eventDate").value
+		var submissionDate = document.getElementById("submissionDate").value
+
+		var textAlert = ''
+		if (from== '') {textAlert = ' ::: Da dove vieni? ::: '}
+		if (age== '') {textAlert = ' ::: Quanti anni hai?::: '}
+		if (phone== '') {textAlert = ' ::: Telefono ::: '}
+		if (email== '') {textAlert = ' ::: Email ::: '}
+		if (name == '') {textAlert = ' ::: Nome e Cognome ::: '}
+
+		if (textAlert != '') {
+				textAlert = textAlert + 'è un campo obbligatorio.'
+						showTextAlert(textAlert)
+						//sendForm = false
+		} else {
+						var btn = document.getElementById("submit_button")
+						btn.disabled=true; 
+						btn.value='Ci siamo quasi...'
+				var userData = {
+						name: name,
+						email: email,
+						phone: phone,
+						age: age,
+						from: from,
+						eventLocation: eventLocation,
+						eventDate: eventDate,
+						submissionDate: submissionDate
+				}
+				var dbData = {
+						user: userData,
+						doc: email,
+						collection: eventDate
+				}
+				dbData.db = db
+				console.log(dbData)
+				firestoreAdd(dbData)
+		}
+
+		//console.log('click')
+		//return sendForm
+		return false
+}
+
+//document.getElementById("submit_button").addEventListener("click", formSetup, false)
+</script>

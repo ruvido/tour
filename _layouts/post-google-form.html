@@ -69,13 +69,8 @@ layout: default
     {% endif %}
 
 	{% if open %}
-			<div id="iscrizioni"></div>
-			{% include form/firebase-form.html
-                    location=page.location 
-                    date=page.date 
-                    redirect='grazie'
-                    error='error'
-            %}
+								<div id="iscrizioni"></div>
+								{% include form/google-form.html location=page.location %}
 	{% else %}
         <div class="centered-button light-link">
             ISCRIZIONI CHIUSE<br>
