@@ -20,6 +20,6 @@ defaults:
     path: ''
   values:
     layout: post
-exclude: [.git]
+exclude: [.git, _firebase]
 # plugins:
 #   - jekyll-redirect-from

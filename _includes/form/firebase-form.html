@@ -95,31 +95,55 @@ db.settings({
 
 function firestoreAdd(data){
 
-		const usersRef = data.db.collection(data.collection).doc(data.doc)
-		
-		usersRef.get()
-		  .then(function (docSnapshot) {
-		    if (docSnapshot.exists) {
-		      usersRef.onSnapshot(function(doc) {
-					  var uniqueEmailText = 'Questa email è già stata utilizzata, usa un indirizzo differente' 
-					  showTextAlert(uniqueEmailText)
-					  var btn = document.getElementById("submit_button")
-				      btn.disabled=false; 
-				      btn.value='Iscriviti 👍'
-		      });
-		    } else {
-				usersRef.set(data.user)
-				.then(function() {
-						console.log("Document successfully written!");
-						window.location='{{site.baseurl}}/{{include.redirect}}'
-				})
-				.catch(function(error) {
-						console.error("Error writing document: ", error);
-						window.location='{{site.baseurl}}/{{include.error}}'
-				})
-		    }
-		  });
+    const usersRef = data.db.collection(data.collection).doc(data.doc)
 
+    usersRef.get()
+        .then(function (docSnapshot) {
+            if (docSnapshot.exists) {
+                usersRef.onSnapshot(function(doc) {
+                    var uniqueEmailText = 'Questa email è già stata utilizzata, usa un indirizzo differente' 
+                    showTextAlert(uniqueEmailText)
+                    var btn = document.getElementById("submit_button")
+                    btn.disabled=false; 
+                    btn.value='Iscriviti 👍'
+                });
+            } else {
+                usersRef.set(data.user)
+                    .then(function() {
+                        console.log("Document successfully written!");
+                        window.location='{{site.baseurl}}/{{include.redirect}}'
+                    })
+                    .catch(function(error) {
+                        console.error("Error writing document: ", error);
+                        window.location='{{site.baseurl}}/{{include.error}}'
+                    })
+            }
+        })
+        .catch(function(error) {
+            console.error("Error reading document: ", error);
+            window.location='{{site.baseurl}}/{{include.error}}'
+        })
+
+//            if (docSnapshot.exists) {
+//                usersRef.onSnapshot(function(doc) {
+//                    var uniqueEmailText = 'Questa email è già stata utilizzata, usa un indirizzo differente' 
+//                    showTextAlert(uniqueEmailText)
+//                    var btn = document.getElementById("submit_button")
+//                    btn.disabled=false; 
+//                    btn.value='Iscriviti 👍'
+//                });
+//            } else {
+//                usersRef.set(data.user)
+//                    .then(function() {
+//                        console.log("Document successfully written!");
+//                        window.location='{{site.baseurl}}/{{include.redirect}}'
+//                    })
+//                    .catch(function(error) {
+//                        console.error("Error writing document: ", error);
+//                        window.location='{{site.baseurl}}/{{include.error}}'
+//                    })
+//            }
+//        });
 }
 function showTextAlert(text) {
 		var preTextAlert = '⚠️'
@@ -173,7 +197,7 @@ function formSetup(submitted) {
 				var dbData = {
 						user: userData,
 						doc: email,
-						collection: eventDate
+						collection: 'events/'+eventDate+'/subscribers'
 				}
 				dbData.db = db
 				console.log(dbData)
