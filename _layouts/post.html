@@ -3,7 +3,7 @@ layout: default
 ---
 {% assign open = true %}
 {% assign closed = false %}
-{% assign compDate = 'now' | date: "%Y%m%d" | plus: 2 %}
+{% assign compDate = 'now' | date: "%Y%m%d" | plus: 0 %}
 {% assign date = page.date | date: "%Y%m%d" | plus: 0 %}
 
 {% if date < compDate %}
