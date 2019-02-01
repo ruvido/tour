@@ -2,51 +2,45 @@
 layout: default
 ---
 
-<!--
-<h1>L'AMORE CHIAMA!</h1> 
-<h3>Pagina in costruzione</h3>
-<h3>Troverai tutte le informazioni online ed i moduli di iscrizione a partire dal 16 Ottobre</h3>>
- -->
- <header>
-	<img src="{{site.baseurl}}/images/amore-chiama-tour-min.jpg" alt="L'Amore Chiama! TOUR ::: 5pani2pesci">
- </header>
+<header>
+    <img src="{{site.baseurl}}/images/amore-chiama-tour-min.jpg" alt="L'Amore Chiama! TOUR ::: 5pani2pesci">
+</header>
 
- <div class="container">
+<div class="container">
 
-	<p></p>
-	<p>Ecco i prossimi eventi. <i>Clicca sulla data per iscriverti!</i></p>
-	<p></p>
-	<p></p>
-    
+    <p></p>
+    <p>Ecco i prossimi eventi. <i>Clicca sulla data per iscriverti!</i></p>
+    <p></p>
+    <p></p>
+
     <div class="list-dates">
         {% for post in site.posts reversed %}
-	
 
-  {% assign attr = "" %}
-	{% if post.tags contains 'ritirone' %}
-				{% assign attr = "highlight" %}
-  {% endif %}
-	<div class="el-dates {{attr}}">
-					<a href="{{site.baseurl}}{{post.url}}">
-				      <span class="days">{{ post.days }}</span>
-              <span class="sep">&bull;</span>
-              <span class="location">{{ post.location }}</span>
-				  </a>
+            <div class="el-dates {{attr}}">
+                <a href="{{site.baseurl}}{{post.url}}">
+                    <span class="days">{{ post.days }}</span>
+                    <span class="sep">&bull;</span>
+                    <span class="location">{{ post.location }}</span>
+                </a>
+                {% assign tag_label = post.tags[0] %}
+                {% include assign_labels.html tag=tag_label %}
+                {% if label %}
+                    <span class="highlight tag {{class}}">{{label}}</span>
+                {% endif %}
 
-					{% include bubble_tags.html tags=post.tags %}
 
-   </div>
+            </div>
 
         {% endfor %}
     </div>
 
-	<p></p>
-	<p></p>
-	<p></p>
-	<p>
-	Vuoi proporre una nuova data?
-	<div><a href="{{site.baseurl}}/scrivici">Scrivici un messaggio 👍</a></div>
-	</p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p>
+    Vuoi proporre una nuova data?
+    <div><a href="{{site.baseurl}}/scrivici">Scrivici un messaggio 👍</a></div>
+    </p>
 
     <div class="main-text">
         {{content}}
