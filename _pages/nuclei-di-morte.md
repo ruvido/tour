@@ -23,7 +23,7 @@ Nel blog abbiamo parlato diverse volte di nuclei di morte. Qui sotto una breve l
 - [Perché finisce una storia d'amore?](https://5p2p.it/perche-finisce-una-storia-damore)
 - [Il fantasma dell'altro](https://5p2p.it/ndm-il-fantasma-dell-altro)
 - [Troppo lavoro](https://5p2p.it/ndm-troppo-lavoro)
-- [Ttrovare l'equilibrio tra vita privata e lavoro](https://5p2p.it/equilibrio-vita-privata-lavoro)
+- [Trovare l'equilibrio tra vita privata e lavoro](https://5p2p.it/equilibrio-vita-privata-lavoro)
 - [Castità, fino a dove si può arrivare?](https://5p2p.it/castita-fino-a-dove-si-puo-arrivare)
 - [La trombamica](https://5p2p.it/la-trombamica)
 - [La castità nel matrimonio](https://www.youtube.com/watch?v=sTVGDsqkiAg)
