@@ -10,7 +10,11 @@ Per vivere una relazione intima è fondamentale individuare tutte quelle dinamic
 
 ## Cosa fare?
 
-Per poter progredire nell'amore è necessario valutare quale di queste dinamiche affliggono la relazione. **Per le coppie:** scorrete la lista punto per punto, possibilmente insieme, chiedendovi quali nuclei di morte siano presenti nella relazione. Non abbiate paura! Individuare un problema è l'occasione per rimboccarsi le maniche e progredire nell'amore! **Per i single:** Perchè l'amore è finito? Scorri la lista e segnati tutte le dinamiche che hai riscontrato nelle relazioni passate. Alla prossima storia, non dimenticare questi punti e rimani vigile appena vedi emergere le stesse situazioni del passato. Se queste dinamiche sono ricorrenti in più di una relazione, probabilmente è il caso di lavorare su quei punti per capire (oggi) perchè segui sempre quel copione.
+Per poter progredire nell'amore è necessario valutare quale di queste dinamiche affliggono la relazione. 
+
+**Per le coppie:** scorrete la lista punto per punto, possibilmente insieme, chiedendovi quali nuclei di morte siano presenti nella relazione. Non abbiate paura! Individuare un problema è l'occasione per rimboccarsi le maniche e progredire nell'amore! 
+
+**Per i single:** Perchè l'amore è finito? Scorri la lista e segnati tutte le dinamiche che hai riscontrato nelle relazioni passate. Alla prossima storia, non dimenticare questi punti e rimani vigile appena vedi emergere le stesse situazioni del passato. Se queste dinamiche sono ricorrenti in più di una relazione, probabilmente è il caso di lavorare su quei punti per capire (oggi) perchè segui sempre quel copione.
 
 ## Alcune storie personali
 
