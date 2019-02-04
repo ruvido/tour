@@ -1,5 +1,5 @@
 ---
-title: Nuclei di morte
+title: Nuclei di morte 💀❤️
 permalink: nuclei-di-morte
 layout: page
 ---
