@@ -8,7 +8,7 @@ clean: true
 
 Ciao!
 
-iscriviti all'incontro di **{{page.location}}**, compilando tutti i campi del modello qui sotto. Per versare la tua quota usa _Paypal_ o una _Carta di pagamento_.
+iscriviti all'incontro di **{{page.location}}**, compilando tutti i campi del modello qui sotto. 
 
 ⛔️ **Non usare la stessa email per iscrivere due persone diverse!**
 
