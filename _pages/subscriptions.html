@@ -1,0 +1,11 @@
+---
+layout: page
+clean: true
+title: Iscrizioni
+permalink: private/iscrizioni
+tags: [index]
+---
+
+{% for ii in site.subscriptions %}
+    <p><a href={{ii.url}}>{{ii.date | date: "%Y-%m-%d"}} {{ii.location}}</a></p>
+{% endfor %}

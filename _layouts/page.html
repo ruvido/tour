@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
- <div class="container">
+<div class="container">
 
     <header>
         <h1>{{page.title}}</h1>
@@ -11,12 +11,15 @@ layout: default
     </header>
 
     <div class="main-text">
-	        {{content}}
+        {{content}}
 
         <p></p>
         <p></p>
         <p></p>
-	{% include youtube.html url="https://www.youtube.com/embed/SeBKQfUwoIw"%}
+
+        {% unless page.clean %}
+            {% include youtube.html url="https://www.youtube.com/embed/SeBKQfUwoIw"%}
+        {% endunless %}
 
         <p></p>
         <p></p>
@@ -24,6 +27,6 @@ layout: default
             <a href="{{site.baseurl}}/">Tutte le date</a>
         </div>
 
-		</div>
+    </div>
 </div>
 

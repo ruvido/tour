@@ -8,6 +8,9 @@ baseurl: ''
 timezone: UTC
 permalink: "/:title:year/"
 collections:
+  subscriptions:  
+    output: true
+    permalink: "/iscrizioni/:year-:month-:title/"
   pages:
     title: Pages
     output: true
