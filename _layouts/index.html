@@ -16,6 +16,15 @@ layout: default
     <div class="list-dates">
         {% for post in site.posts reversed %}
 
+            {% if post.status == 'annullato' %}
+                <del>
+            <div class="el-dates grayed-text">
+                    <span class="days">{{ post.days }}</span>
+                    <span class="sep">&bull;</span>
+                    <span class="location">{{ post.location }}</span>
+            </div>
+                </del>
+            {% else %}
             <div class="el-dates {{attr}}">
                 <a href="{{site.baseurl}}{{post.url}}">
                     <span class="days">{{ post.days }}</span>
@@ -27,10 +36,8 @@ layout: default
                 {% if label %}
                     <span class="highlight tag {{class}}">{{label}}</span>
                 {% endif %}
-
-
             </div>
-
+            {% endif %}
         {% endfor %}
     </div>
 
