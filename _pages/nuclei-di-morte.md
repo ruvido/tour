@@ -27,6 +27,7 @@ Nel blog abbiamo parlato diverse volte di nuclei di morte. Qui sotto una breve l
 - [Castità, fino a dove si può arrivare?](https://5p2p.it/castita-fino-a-dove-si-puo-arrivare)
 - [La trombamica](https://5p2p.it/la-trombamica)
 - [La castità nel matrimonio](https://www.youtube.com/watch?v=sTVGDsqkiAg)
+- [Desatellizzazione, suocera e rapporto con i genitori](https://www.youtube.com/watch?v=fb5mCmo0l1k)
 
 ## La lista
 
