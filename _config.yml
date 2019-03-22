@@ -7,6 +7,8 @@ url: https://tour.5p2p.it
 baseurl: ''
 timezone: UTC
 permalink: "/:title:year/"
+google:
+    analytics: 'UA-39520577-4'
 collections:
   subscriptions:  
     output: true
