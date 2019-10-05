@@ -4,6 +4,9 @@ permalink: "/"
 layout: index
 ---
 
+## Il programma
+### Scommettere tutto sul progetto di Dio
+
 A volte è un istante, un’intima rivelazione. Spesso è frutto di un cammino personale fatto di scelte, di Parola di Dio e confronto. Ciò che so, è che ogni vita è vocazione, e che la tua vocazione (sia alla consacrazione che al matrimonio) è una risposta decisa e convinta alla chiamata all’Amore che hai ricevuto. E proprio in quella semplice risposta risiede il segreto della felicità. Ma come si fa? Da dove si parte? In amore non si improvvisa! 
 
 {% include youtube.html url="https://www.youtube.com/embed/M92ctSwuV4o"%}

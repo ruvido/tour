@@ -8,45 +8,14 @@ layout: default
 
 <div class="container">
 
-    <p></p>
-    <p>Ecco i prossimi eventi. <i>Clicca sulla data per iscriverti!</i></p>
-    <p></p>
-    <p></p>
-
-    <div class="list-dates">
-        {% for post in site.posts reversed %}
-
-            {% if post.status == 'annullato' %}
-                <del>
-            <div class="el-dates grayed-text">
-                    <span class="days">{{ post.days }}</span>
-                    <span class="sep">&bull;</span>
-                    <span class="location">{{ post.location }}</span>
-            </div>
-                </del>
-            {% else %}
-            <div class="el-dates {{attr}}">
-                <a href="{{site.baseurl}}{{post.url}}">
-                    <span class="days">{{ post.days }}</span>
-                    <span class="sep">&bull;</span>
-                    <span class="location">{{ post.location }}</span>
-                </a>
-                {% assign tag_label = post.tags[0] %}
-                {% include assign_labels.html tag=tag_label %}
-                {% if label %}
-                    <span class="highlight tag {{class}}">{{label}}</span>
-                {% endif %}
-            </div>
-            {% endif %}
-        {% endfor %}
-    </div>
 
     <p></p>
     <p></p>
     <p></p>
+    <h2>Il NUOVO calendario 2019/2020 è in arrivo!</h2>
     <p>
-    Vuoi proporre una nuova data?
-    <div><a href="{{site.baseurl}}/scrivici">Scrivici un messaggio 👍</a></div>
+    <i>Vuoi proporre una nuova data?</i> Basta una sala capiente e una cinquantina di ragazzi per iniziare.
+    <div><a href="{{site.baseurl}}/scrivici">Ecco come contattarci 👍</a></div>
     </p>
 
     <div class="main-text">
