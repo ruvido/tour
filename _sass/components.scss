@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,900i&display=swap');
 
 .container {
     font-family: 'Roboto Mono', monospace;
@@ -28,12 +29,6 @@ header,footer {
     // background: red;
 }
 
-.highlight, .highlight a {
-	display: inline-block;
-	color: white;
-	background: black;
-	border-radius: 20px;
-}
 .tag {
 	padding: 0 0.4rem;
 	font-size: 0.8rem;
@@ -61,6 +56,28 @@ header,footer {
 				color: black;
 				background-color: #f1c40f; 
 }
+
+.greentour {
+	background-color: #528d7c;
+}
+.purpletour {
+	background-color: #3c4074;
+}
+
+.highlight, .highlight a {
+	font-family: 'Montserrat', sans-serif;
+	display: inline-block;
+	color: white;
+	padding: 0.2rem 0.6rem;
+	text-decoration: none;
+}
+.highlight.light {
+	background-color: #528d7c;
+}
+.highlight.dark {
+	background-color: #3c4074;
+}
+
 .el-dates {
     padding: 0 0.4rem;
     // border: 0.1px solid black;
@@ -68,12 +85,13 @@ header,footer {
     margin: 0.8rem auto;
 }
 .el-dates .days {
-    text-align: right;
-    font-weight: bold;
 }
 
-.el-dates.location {
-    text-align: left;    
+.el-dates .location {
+    font-weight: 900;
+    font-style: italic;
+    font-size: 1.1rem;
+    padding-right: 0.4rem;
 }
 
 .main-text {
