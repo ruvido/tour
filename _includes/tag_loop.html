@@ -1,0 +1,31 @@
+{% assign tag = include.tag %} 
+
+{% if tag == empty %}
+	{% assign tappe = site.posts | where_exp: "post", "post.tags == empty" %}
+{% else %}
+	{% assign tappe = site.posts | where_exp: "post", "post.tags contains tag" %}
+{% endif %}
+
+<p></p>
+<strong><span class="days">2020</span></strong>
+{% for post in tappe reversed %}
+    <div future-date="{{ post.date | date: '%Y-%m-%d' }}">
+    	{% if post.status == 'annullato' %}
+    	{% else %}
+    	<div class="el-dates {{attr}}">
+    		<a href="{{site.baseurl}}{{post.url}}">
+    			<span class="days">{{ post.days }}</span>
+    			<span class="sep">&bull;</span>
+    			<span class="location">{{ post.location }}</span>
+    		</a>
+		<!--
+    		{% assign tag_label = post.tags[0] %}
+    		{% include assign_labels.html tag=tag_label %}
+    		{% if label %}
+    		<span class="highlight tag {{class}}">{{label}}</span>
+    		{% endif %}
+		-->
+    	</div>
+    	{% endif %}
+    </div>
+{% endfor %}

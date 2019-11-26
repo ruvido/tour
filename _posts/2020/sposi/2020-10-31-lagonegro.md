@@ -2,7 +2,7 @@
 status: pending
 days: 31Ott - 2Nov
 location: Lagonegro
-tags: ritiro_sposi
+tags: sposi
 telegram:
 maps:
 info:
