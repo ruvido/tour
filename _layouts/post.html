@@ -1,6 +1,12 @@
 ---
 layout: default
 ---
+
+
+
+
+
+
 {% assign open = true %}
 {% assign closed = false %}
 {% assign compDate = 'now' | date: "%Y%m%d" | plus: 0 %}
@@ -34,35 +40,9 @@ layout: default
 
     <div class="main-text">
 
-        {% assign tag_label = page.tags[0] %}
-        {% include assign_labels.html tag=tag_label %}
-        {% if label %}
-            <span class="highlight tag {{class}}">{{label}}</span>
-        {% endif %}
+	Tutte le info su questo corso saranno caricate al più presto.
 
-        {{text | markdownify}}
-
-        {{content}}
-
-        {% if page.form == false %}
-
-        {% elsif open %}
-            <div id="iscrizioni"></div>
-            {% include form/firebase-form.html
-            location=page.location 
-            date=page.date 
-            redirect='grazie'
-            error='error'
-            %}
-        {% else %}
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <div class="centered-button light-link">
-                ISCRIZIONI CHIUSE<br>
-            </div>
-        {% endif %}
+    </div>
 
         <footer>
             <p></p>
@@ -74,26 +54,3 @@ layout: default
     </div>
 
 </div>
-
-        <!--
-        <p></p>
-        {% include youtube.html url="https://www.youtube.com/embed/SeBKQfUwoIw"%}
-
-        {% if open %}
-            <div class="centered-button">
-                <a href="#iscrizioni">
-                    <img src="{{site.baseurl}}/images/iscriviti.jpg">
-                </a>
-            </div>
-        {% endif %}
-
-        {% if closed %}
-            <div class="centered-button light-link">
-                <p></p>
-                <p></p>
-                ISCRIZIONI CHIUSE<br>
-                <a href="{{site.baseurl}}/">Vedi tutte le date</a>
-            </div>
-        {% endif %}
-        -->
-

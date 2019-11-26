@@ -1,0 +1,90 @@
+---
+layout: default
+---
+{% assign open = true %}
+{% assign closed = false %}
+{% assign compDate = 'now' | date: "%Y%m%d" | plus: 2 %}
+{% assign date = page.date | date: "%Y%m%d" | plus: 0 %}
+
+{% if date < compDate %}
+	{% assign open = false %}
+	{% assign closed = true %}
+{% endif %}
+{% if page.private == true %}
+	{% assign open = false %}
+	{% assign closed = true %}
+{% endif %}
+
+ <div class="container">
+
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <header>
+        <h1>{{page.location}}</h1>
+        <h2>{{page.days}}</h2>
+        <div class="light-link">
+            <a href="{{site.baseurl}}/">⟵ Indietro</a>
+        </div>
+    </header>
+
+    <div class="main-text">
+
+			{% assign tag_label = page.tags[0] %}
+			{% include assign_labels.html tag=tag_label %}
+			{% if label %}
+					<span class="highlight tag {{class}}">{{label}}</span>
+			{% endif %}
+		<p>{{text | markdownify}}</p>
+	{% unless tag == 'tour' %}
+		<p>{{content}}</p>
+    {% endunless %}
+
+	{% if open %}
+        <div class="centered-button">
+            <a href="#iscrizioni">
+            <img src="{{site.baseurl}}/images/iscriviti.jpg">
+            </a>
+        </div>
+	{% endif %}
+	
+	{% if closed %}
+        <div class="centered-button light-link">
+        <p></p>
+        <p></p>
+            ISCRIZIONI CHIUSE<br>
+            <a href="{{site.baseurl}}/">Vedi tutte le date</a>
+        </div>
+	{% endif %}
+
+  <p></p>
+	{% include youtube.html url="https://www.youtube.com/embed/SeBKQfUwoIw"%}
+
+	{% if tag == 'tour' %}
+        {{content}}
+    {% endif %}
+
+	{% if open %}
+								<div id="iscrizioni"></div>
+								{% include form/google-form.html location=page.location %}
+	{% else %}
+        <div class="centered-button light-link">
+            ISCRIZIONI CHIUSE<br>
+        </div>
+	{% endif %}
+
+    <footer>
+        <p></p>
+        <p></p>
+        <div class="centered-button light-link">
+            <a href="{{site.baseurl}}/">Tutte le date</a>
+        </div>
+    </footer>
+  </div>
+
+</div>
+

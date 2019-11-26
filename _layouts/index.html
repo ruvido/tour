@@ -3,24 +3,94 @@ layout: default
 ---
 
 <header>
-    <img src="{{site.baseurl}}/images/amore-chiama-tour-min.jpg" alt="L'Amore Chiama! TOUR ::: 5pani2pesci">
+	<div style="width: 128px; padding: 1rem 1rem;">
+    <img src="{{site.baseurl}}/images/5pani2pesci.png" alt="5pani2pesci">
+	</div>
+    <p></p>
+    <p></p>
+    <p></p>
+    <img src="{{site.baseurl}}/images/amore-chiama-tour-min.png" alt="L'Amore Chiama! TOUR ::: 5pani2pesci">
 </header>
 
 <div class="container">
 
+    <div class="list-dates">
 
-    <p></p>
-    <p></p>
-    <p></p>
-    <h2>Il NUOVO calendario 2019/2020 è in arrivo!</h2>
-    <p>
-    <i>Vuoi proporre una nuova data?</i> Basta una sala capiente e una cinquantina di ragazzi per iniziare.
-    <div><a href="{{site.baseurl}}/scrivici">Ecco come contattarci 👍</a></div>
-    </p>
+	    {% for post in site.posts reversed %}
+		<div future-date="{{ post.date | date: '%Y-%m-%d' }}">
+                	{% if post.status == 'annullato' %}
+	        	{% else %}
+			<div class="el-dates {{attr}}">
+				<a href="{{site.baseurl}}{{post.url}}">
+					<span class="days">{{ post.days }}</span>
+					<span class="sep">&bull;</span>
+					<span class="location">{{ post.location }}</span>
+				</a>
+				{% assign tag_label = post.tags[0] %}
+				{% include assign_labels.html tag=tag_label %}
+				{% if label %}
+				<span class="highlight tag {{class}}">{{label}}</span>
+				{% endif %}
+			</div>
+	        	{% endif %}
+		</div>
+		{% endfor %}
+
+    </div>
+		<!--
+
+        {% for post in site.posts reversed %}
+
+            {% if post.status == 'annullato' %}
+                <del>
+            <div class="el-dates grayed-text">
+                    <span class="days">{{ post.days }}</span>
+                    <span class="sep">&bull;</span>
+                    <span class="location">{{ post.location }}</span>
+            </div>
+                </del>
+            {% else %}
+            <div class="el-dates {{attr}}">
+                <a href="{{site.baseurl}}{{post.url}}">
+                    <span class="days">{{ post.days }}</span>
+                    <span class="sep">&bull;</span>
+                    <span class="location">{{ post.location }}</span>
+                </a>
+                {% assign tag_label = post.tags[0] %}
+                {% include assign_labels.html tag=tag_label %}
+                {% if label %}
+                    <span class="highlight tag {{class}}">{{label}}</span>
+                {% endif %}
+            </div>
+            {% endif %}
+        {% endfor %}
+
+		-->
+
 
     <div class="main-text">
         {{content}}
     </div>
 
+    <p>
+    <i>Vuoi proporre una nuova data?</i> Basta una sala capiente e una cinquantina di ragazzi per iniziare.
+    <div><a href="{{site.baseurl}}/scrivici">Ecco come contattarci 👍</a></div>
+    </p>
+
 </div>
 
+<script>
+    function getCompareDate() {
+        var d = new Date(),
+            month = '' + (d.getMonth() + 1),
+            day = '' + d.getDate(),
+            year = d.getFullYear();
+        if (month.length < 2) month = '0' + month;
+        if (day.length < 2) day = '0' + day;
+        return [year, month, day].join('');
+    }
+    var elements = document.querySelectorAll('[future-date]');
+    Array.prototype.forEach.call(elements, function(el, i){
+        if(el.getAttribute('future-date').split('-').join('') < getCompareDate()) el.remove();
+    });
+</script>
