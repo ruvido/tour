@@ -3,9 +3,6 @@ layout: default
 ---
 
 <header>
-	<div style="width: 128px; padding: 1rem 1rem;">
-    <img src="{{site.baseurl}}/images/5pani2pesci.png" alt="5pani2pesci">
-	</div>
     <p></p>
     <p></p>
     <p></p>
@@ -13,78 +10,8 @@ layout: default
 </header>
 
 <div class="container">
-
-
-<div class="list-dates">
-
-<h2 class="">TOUR</h2>
-<p>Introduzione al discernimento vocazionale (per giovani, single e fidanzati, fascia di età consigliata 18-35).</p>
-{% include tag_loop.html tag = empty %}
-
-<h2 class="">RITIRI</h2>
-<p>Per entrare nel progetto di Dio (per giovani).</p>
-{% include tag_loop.html tag = 'ritirone' %}
-
-<h2 class="">SPOSI</h2>
-<p>La missione della coppia (solo per sposi con più di 3 anni di matrimonio).</p>
-{% include tag_loop.html tag = 'sposi' %}
-
-
-    </div>
-		<!--
-
-        {% for post in site.posts reversed %}
-
-            {% if post.status == 'annullato' %}
-                <del>
-            <div class="el-dates grayed-text">
-                    <span class="days">{{ post.days }}</span>
-                    <span class="sep">&bull;</span>
-                    <span class="location">{{ post.location }}</span>
-            </div>
-                </del>
-            {% else %}
-            <div class="el-dates {{attr}}">
-                <a href="{{site.baseurl}}{{post.url}}">
-                    <span class="days">{{ post.days }}</span>
-                    <span class="sep">&bull;</span>
-                    <span class="location">{{ post.location }}</span>
-                </a>
-                {% assign tag_label = post.tags[0] %}
-                {% include assign_labels.html tag=tag_label %}
-                {% if label %}
-                    <span class="highlight tag {{class}}">{{label}}</span>
-                {% endif %}
-            </div>
-            {% endif %}
-        {% endfor %}
-
-		-->
-
-
-    <div class="main-text">
-        {{content}}
-    </div>
-
-    <p>
-    <i>Vuoi proporre una nuova data?</i> Basta una sala capiente e una cinquantina di ragazzi per iniziare.
-    <div><a href="{{site.baseurl}}/scrivici">Ecco come contattarci 👍</a></div>
-    </p>
-
+	<div class="list-dates">
+		{{content}}
+	</div>
 </div>
 
-<script>
-    function getCompareDate() {
-        var d = new Date(),
-            month = '' + (d.getMonth() + 1),
-            day = '' + d.getDate(),
-            year = d.getFullYear();
-        if (month.length < 2) month = '0' + month;
-        if (day.length < 2) day = '0' + day;
-        return [year, month, day].join('');
-    }
-    var elements = document.querySelectorAll('[future-date]');
-    Array.prototype.forEach.call(elements, function(el, i){
-        if(el.getAttribute('future-date').split('-').join('') < getCompareDate()) el.remove();
-    });
-</script>

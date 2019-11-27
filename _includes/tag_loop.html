@@ -1,4 +1,6 @@
 {% assign tag = include.tag %} 
+	
+{% capture today %}{{'now' | date: '%s' | plus: 0 %}}{% endcapture %}
 
 {% if tag == empty %}
 	{% assign tappe = site.posts | where_exp: "post", "post.tags == empty" %}
@@ -7,23 +9,27 @@
 {% endif %}
 
 {% assign year = 1250 %} 
-{% assign tone = 'light' %} 
+{% assign tone = 'dark' %} 
 <p></p>
-{% for post in tappe reversed %}
-    
-    <div future-date="{{ post.date | date: '%Y-%m-%d' }}">
 
-	{% if tone == 'dark' %}
-		{% assign tone = 'light' %} 
-	{% else %}
-		{% assign tone = 'dark' %} 
-	{% endif %}
-		
-    	{% assign postYear = post.date | date: '%Y' %}
-	{% if postYear != year %}
-    		{% assign year = postYear %}
-		<strong><div class="days highlight dark">{{postYear}}</div></strong>
-	{% endif %}
+{% for post in tappe reversed %}
+{% capture date %}{{post.date | date: '%s' | plus: 0 %}}{% endcapture %}
+{% if date > today %}
+    
+<div>
+
+
+{% if tone == 'dark' %}
+	{% assign tone = 'light' %} 
+{% else %}
+	{% assign tone = 'dark' %} 
+{% endif %}
+	
+{% assign postYear = post.date | date: '%Y' %}
+{% if postYear != year %}
+	{% assign year = postYear %}
+	<strong><div class="days highlight dark">{{postYear}}</div></strong>
+{% endif %}
 
 	<div class="el-dates {{attr}}">
     		<a class="highlight {{tone}}" href="{{site.baseurl}}{{post.url}}">
@@ -37,4 +43,9 @@
     		</a>
     	</div>
     </div>
+{% endif %}
 {% endfor %}
+
+<div>&nbsp;</div>
+<div></div>
+<div></div>

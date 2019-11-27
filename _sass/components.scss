@@ -8,6 +8,15 @@
     margin: 0 auto;
 }
 
+ul {
+	padding: 1rem;
+	font-size: 0.9rem;
+	list-style-type: disc;
+	li {
+		padding: 0.1rem 0.4rem;
+	}
+}
+
 img {
     max-width: 100%;
 }
@@ -16,17 +25,29 @@ header,footer {
     padding:0;
     width: 100%;
     img {
-				display: block;
-				margin: 0 auto;
-        max-width: $tablet;
-				width: 100%;
+	    display: block;
+	    margin: 0 auto;
+	    max-width: $tablet;
+	    width: 100%;
     }
 }
 
 .list-dates {
     margin: 0 auto;
     padding: 0 0;
-    // background: red;
+    h2 {
+	    font-family: 'Montserrat', sans-serif;
+	    font-weight: 900;
+	    font-style: italic;
+	    margin: 2rem auto 1rem auto;
+	    padding: 0.4rem 0.8rem;
+	    display: inline-block;
+	    //background-color: #3c4074;
+	    //background-color: #528d7c;
+	    background-color: #e35d3c; 
+	    background-color: #6ab19c;
+	    color: white;
+    }
 }
 
 .tag {
@@ -53,8 +74,8 @@ header,footer {
 	background-color: #1abc9c; 
 }
 .sun-flower {
-				color: black;
-				background-color: #f1c40f; 
+	color: black;
+	background-color: #f1c40f; 
 }
 
 .greentour {
@@ -72,7 +93,8 @@ header,footer {
 	text-decoration: none;
 }
 .highlight.light {
-	background-color: #528d7c;
+	background-color: #6ab19c;
+	//background-color: #528d7c;
 }
 .highlight.dark {
 	background-color: #3c4074;
