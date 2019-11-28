@@ -6,7 +6,7 @@ url_5pani2pesci: https://5p2p.it
 url: https://tour.5p2p.it
 baseurl: ''
 timezone: UTC
-permalink: "/:title:year/"
+permalink: "/:title-:month:year/"
 google:
     analytics: 'UA-39520577-4'
 collections:

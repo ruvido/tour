@@ -1,8 +1,8 @@
 ---
+status: ok
 days: 5-8 Dicembre
 location: Lagonegro (PZ)
-tag: ritirone
-form: false 
+tag: ritirone 
 ---
 
 !['Santa Maria degli Angeli Lagonegro'](/images/lagonegro/lagonegro-convento-min.jpg)
@@ -21,6 +21,6 @@ Ti aspettiamo!
 
 ## Iscrizioni
 
-Telefonare al numero:
+A breve sarà possibile iscriversi su questa pagina.
 
-351 923 00 25 <span class="small-text">(lun-ven 9-12)</span>
+**ATTENZIONE:** Posti limitati!

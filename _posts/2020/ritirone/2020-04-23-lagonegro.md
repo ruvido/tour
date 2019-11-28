@@ -24,4 +24,3 @@ Ti aspettiamo!
 A breve sarà possibile iscriversi su questa pagina.
 
 **ATTENZIONE:** Posti limitati!
-

@@ -36,8 +36,6 @@ layout: default
 
 	{% if page.status == 'ok' %}
 		{{content}}
-		{% capture thisInclude %}{% include messages/tour-info.md map=page.map mobile=page.mobile %}{% endcapture %}
-		{{ thisInclude | markdownify }}
 	{% else %}
 		{% capture thisInclude %}{% include messages/pending.md %}{% endcapture %}
 		{{ thisInclude | markdownify }}
