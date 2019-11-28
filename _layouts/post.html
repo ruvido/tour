@@ -1,12 +1,6 @@
 ---
 layout: default
 ---
-
-
-
-
-
-
 {% assign open = true %}
 {% assign closed = false %}
 {% assign compDate = 'now' | date: "%Y%m%d" | plus: 0 %}
@@ -40,7 +34,14 @@ layout: default
 
     <div class="main-text">
 
-	Tutte le info su questo corso saranno caricate al più presto.
+	{% if page.status == 'ok' %}
+		{{content}}
+		{% capture thisInclude %}{% include messages/tour-info.md map=page.map mobile=page.mobile %}{% endcapture %}
+		{{ thisInclude | markdownify }}
+	{% else %}
+		{% capture thisInclude %}{% include messages/pending.md %}{% endcapture %}
+		{{ thisInclude | markdownify }}
+	{% endif %}
 
     </div>
 
