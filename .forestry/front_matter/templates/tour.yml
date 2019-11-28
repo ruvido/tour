@@ -12,11 +12,13 @@ fields:
   name: location
   label: location
 - type: text
-  name: telegram
-  label: telegram
-- type: text
   name: map
   label: map
 - type: number
   name: mobile
   label: mobile
+- type: text
+  name: telegram
+  label: telegram
+pages:
+- _posts/2020/tour/2020-01-25-milano.md
