@@ -29,7 +29,7 @@ In generale, per proporre una **nuova data**, basta una sala capiente e una cinq
 <a name="posso-partecipare"></a>
 ### Ma io ho 37/45/67 anni, posso partecipare?
 
-Le tappe del tour e i *ritironi* a Lagonegro sono pensati per giovani di una età compresa tra i 18 e i 35 anni, single e fidanzati. Questa è una età *consigliata*. Se sei fuori da questo intervallo, è importante che ti domandi **seriamente** per quale motivo vuoi partecipare. È la tua prima esperienza di questo tipo? Non hai mai sentito parlare di vocazione? In questi casi potrebbe aver senso venire. Ma se questo fosse l'ennesimo corso a cui vieni, la tua partecipazione è sconsigliata. È necessario mettere in pratica ciò che hai ascoltato attraverso un cammino di discernimento *personale* con una guida spirituale.
+Le tappe del tour e i *ritironi* a Lagonegro sono pensati per giovani di una età compresa tra i 18 e i 35 anni, single e fidanzati. Questa è una età *consigliata*. Se sei fuori da questo intervallo, è importante che ti chiedi per quale motivo vuoi partecipare. È la tua prima esperienza di questo tipo? Non hai mai sentito parlare di vocazione? In questi casi potrebbe aver senso venire. Ma se questo fosse l'ennesimo corso a cui vieni, la tua partecipazione è sconsigliata. È necessario mettere in pratica ciò che hai ascoltato attraverso un cammino di discernimento *personale* con una guida spirituale.
 
 <a name="costa"></a>
 ### Quanto costa venire ad una vostra esperienza?
