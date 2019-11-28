@@ -1,0 +1,25 @@
+---
+label: tour
+hide_body: false
+fields:
+- type: text
+  name: status
+  label: status
+- type: text
+  name: days
+  label: days
+- type: text
+  name: location
+  label: location
+- type: text
+  name: map
+  label: map
+- type: number
+  name: mobile
+  label: mobile
+- type: text
+  name: telegram
+  label: telegram
+pages:
+- _posts/2020/tour/2020-02-22-salerno.md
+- _posts/2020/tour/2020-01-25-milano.md
