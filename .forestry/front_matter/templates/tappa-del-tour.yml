@@ -1,9 +1,0 @@
----
-label: Tappa del TOUR
-hide_body: false
-fields:
-- name: status
-  type: text
-  config:
-    required: false
-  label: status
