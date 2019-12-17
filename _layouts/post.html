@@ -25,21 +25,36 @@ layout: default
     <p></p>
     <p></p>
     <header>
-        <h1>{{page.location}}</h1>
-        <h2>{{page.days}}</h2>
+	{% if page.city %}
+        <h3 class="block light highlight">{{page.city}}</h3>
+	<p></p>
+	{% endif %}
+
+	<h1 class="block dark highlight">{{page.location}}</h1>
+        <h2 class="block light highlight">{{page.days}}</h2>
         <div class="light-link">
             <a href="{{site.baseurl}}/">⟵ Indietro</a>
         </div>
     </header>
 
     <div class="main-text">
+	{% capture tourContent %}{% include content/tour.md %}{% endcapture %}
+	{% capture ritironeContent %}{% include content/ritirone.md %}{% endcapture %}
+	{% capture sposiContent %}{% include content/sposi.md %}{% endcapture %}
 
-	{% if page.status == 'ok' %}
-		{{content}}
-	{% else %}
-		{% capture thisInclude %}{% include messages/pending.md %}{% endcapture %}
-		{{ thisInclude | markdownify }}
-	{% endif %}
+
+	    {% if page.path contains "tour" %} 
+		{% include content/tour.md %}
+	    {% endif %}
+
+	    {% if page.path contains "ritirone" %} 
+		{{ ritironeContent | markdownify }}
+	    {% endif %}
+
+	    {% if page.path contains "sposi" %} 
+		{{ sposiContent | markdownify }}
+	    {% endif %}
+
 
     </div>
 

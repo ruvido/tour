@@ -125,7 +125,10 @@ header,footer {
 }
 
 .centered-button {
-    padding: 2rem 0;
+	text-decoration: none;
+	margin: 0 auto;
+	display: inline-block;
+    padding: 1rem 1rem;
     text-align: center;
     img {
         width: 140px;
@@ -162,4 +165,20 @@ header,footer {
 				background-color: #2c3e50;
 				color: white;
 }
+.block {display: table;}
 
+.important {
+	font-size: 1.1rem;
+	font-weight: bold;
+	border-style: solid;
+	border-width: 4px;
+	border-color: black;
+}
+
+.message {
+	padding: 2rem;
+	border-style: dashed;
+	border-width: 2px;
+	border-color: black;
+}
+.zero-padding {padding:0;}

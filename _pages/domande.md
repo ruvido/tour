@@ -5,9 +5,8 @@ layout: page
 clean: true
 ---
 
-<div class="small-text">
 Qui una lista delle domande frequenti. Leggere con attenzione!
-</div>
+<div class="small-text" markdown="1">
 
 - [Perchè non venite a Roma, Bergano ecc. ecc.?](#non-venite)
 - [Ma io ho 37/45/67 anni, posso partecipare?](#posso-partecipare)
@@ -16,6 +15,7 @@ Qui una lista delle domande frequenti. Leggere con attenzione!
 - [Dove posso dormire?](#dormire)
 - [I fidanzati possono partecipare agli incontri per sposi?](#fidanzati)
 
+</div>
 
 <a name="non-venite"></a>
 ### Perchè non venite a Roma, Bergano ecc. ecc.?
