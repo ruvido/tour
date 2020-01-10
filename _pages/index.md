@@ -14,6 +14,9 @@ Hai dubbi? Leggi la pagina [domande&risposte](domande).
 Introduzione al discernimento vocazionale
 <span class="small-text">(per giovani, single e fidanzati, fascia di età consigliata 18-35).
 </span>
+
+😘 Guarda il [video](https://youtu.be/M92ctSwuV4o) per maggiori informazioni. 
+
 {% include tag_loop.html tag = empty %}
 
 *Vuoi proporre una nuova data?* Basta una sala capiente e una cinquantina di ragazzi per iniziare.
