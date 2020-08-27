@@ -10,6 +10,7 @@ layout: index
 
 Hai dubbi? Leggi la pagina [domande&risposte](domande). 
 
+&nbsp;
 <span class=“alert”>ATTENZIONE: causa l’attuale situazione COVID-19 tutti gli incontri/ritiri sono sospesi! Iscriviti al canale TELEGRAM per essere avvertito appena aggiorneremo le nuove date 👍</span>
 
 ## TOUR
