@@ -10,7 +10,7 @@ layout: index
 
 Hai dubbi? Leggi la pagina [domande&risposte](domande). 
 
-<span class="alert"><strong>ATTENZIONE</strong>: causa l’attuale situazione COVID-19 tutti gli incontri/ritiri sono sospesi! <a href="https://t.me/canale5pani2pesci">Iscriviti al canale TELEGRAM</a> per essere avvertito appena aggiorneremo le nuove date 👍</span>
+<span class="alert"><strong>ATTENZIONE</strong>: causa l’attuale situazione COVID-19 tutti gli incontri/ritiri sono sospesi! <a href="https://t.me/canale5pani2pesci">Iscriviti al canale TELEGRAM</a> per ricevere le date dei prossimi incontri in tempo reale 👍</span>
 
 ## TOUR
 Introduzione al discernimento vocazionale
